@@ -1,10 +1,10 @@
-POST http://localhost:4000/api/v1/volunteer/scheduleUser
+POST http://localhost:4000/api/v1/login
 Content-Type: application/json
 
 {
-  "email":"mrsrjn224@gmail.com",
-  "userId": 123,
-  "date": "2025-10-05",
-  "time": "14:30",
-  "link": "https://zoom.us/j/xxxxxxxxxx"
+  "email": "mrsrjn224@gmail.com",
+  "password": "@newpassword123",
+  "newPassword": "@newpassword123",
+  "name": "Srijan",
+  "code":677797
 }
