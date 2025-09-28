@@ -3,9 +3,9 @@ import { sendMail } from "../../../utils/mailer.js";
 import { generateSixDigitCode } from "../../../utils/randomNumber.js";
 
 export async function signup(req, res) {
-  const { email, password, name, number } = req.body;
+  const { email, password, name, number,age } = req.body;
 
-  if (!email || !password || !name ) {
+  if (!email || !password || !name || !age ) {
     return res.status(400).json({ error: "All fields are required" });
   }
 
@@ -17,7 +17,8 @@ export async function signup(req, res) {
     const { data: authData, error: authError } = await supabase.auth.admin.createUser({
       email,
       password,
-      email_confirm: false // not confirmed yet
+      email_confirm: false, // not confirmed yet
+      age
     });
 
     if (authError) {
