@@ -1,7 +1,7 @@
 import supabase from "../../../supabase/index.js";
 import { sendMail } from "../../../utils/mailer.js";
 import { generateSixDigitCode } from "../../../utils/randomNumber.js";
-
+import "dotenv/config";
 export async function requestPasswordReset(req, res) {
   const { email } = req.body;
 
@@ -41,13 +41,13 @@ export async function requestPasswordReset(req, res) {
     // Send OTP via styled email
     await sendMail({
       to: email,
-      subject: "Mero Sathi - Password Reset Request",
-      from: `"Mero Sathi" <${process.env.SMTP_USER}>`,
+      subject: "Vexito - Password Reset Request",
+      from: `"Vexito" <${process.env.Email_USER}>`,
       html: `
       <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
         <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
           <div style="background-color: #FF5722; color: #ffffff; padding: 20px; text-align: center;">
-            <h1 style="margin: 0; font-size: 24px;">Mero Sathi</h1>
+            <h1 style="margin: 0; font-size: 24px;">Vexito</h1>
           </div>
           <div style="padding: 30px; color: #333333; font-size: 16px; line-height: 1.5;">
             <p>Hi <strong>${user.name}</strong>,</p>
@@ -58,10 +58,10 @@ export async function requestPasswordReset(req, res) {
               </span>
             </p>
             <p>If you did not request a password reset, please ignore this email.</p>
-            <p>Best regards,<br>The Mero Sathi Team</p>
+            <p>Best regards,<br>The Vexito Team</p>
           </div>
           <div style="background-color: #f1f1f1; text-align: center; padding: 15px; font-size: 12px; color: #777777;">
-            &copy; ${new Date().getFullYear()} Mero Sathi. All rights reserved.
+            &copy; ${new Date().getFullYear()} Vexito. All rights reserved.
           </div>
         </div>
       </div>

@@ -49,12 +49,12 @@ export async function signup(req, res) {
     await sendMail({
       to: email,
       subject: "Welcome to Mero Sathi - Verify Your Email",
-      from: "merosathi.nepal99@gmail.com",
+      from: "vexito.nepal@gmail.com",
       html: `
       <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
         <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
           <div style="background-color: #4CAF50; color: #ffffff; padding: 20px; text-align: center;">
-            <h1 style="margin: 0; font-size: 24px;">Mero Sathi</h1>
+            <h1 style="margin: 0; font-size: 24px;">Vexito</h1>
           </div>
           <div style="padding: 30px; color: #333333; font-size: 16px; line-height: 1.5;">
             <p>Hi <strong>${name}</strong>,</p>
@@ -65,10 +65,10 @@ export async function signup(req, res) {
               </span>
             </p>
             <p>If you did not sign up for this account, please ignore this email.</p>
-            <p>Best regards,<br>The Mero Sathi Team</p>
+            <p>Best regards,<br>The Vexito Team</p>
           </div>
           <div style="background-color: #f1f1f1; text-align: center; padding: 15px; font-size: 12px; color: #777777;">
-            &copy; ${new Date().getFullYear()} Mero Sathi. All rights reserved.
+            &copy; ${new Date().getFullYear()} Vexito. All rights reserved.
           </div>
         </div>
       </div>
