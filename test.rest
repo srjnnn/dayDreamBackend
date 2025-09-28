@@ -1,12 +1,12 @@
-POST http://localhost:4000/api/v1/signup
+POST http://localhost:4000/api/v1/volunteer/scheduleUser
 Content-Type: application/json
 
 {
-  "userId":1,
+  "userId":9,
   "category":"anxiety",
   "date":"2024-06-20",
   "time":"10:00 AM",
-  "email": "mrsrjn224@gmail.com",
+  "email": "skharel0@gmail.com",
   "password": "@newpassword123",
   "newPassword": "@newpassword123",
   "name": "Srijan",
