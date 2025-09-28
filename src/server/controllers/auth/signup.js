@@ -49,7 +49,7 @@ export async function signup(req, res) {
     await sendMail({
       to: email,
       subject: "Welcome to Mero Sathi - Verify Your Email",
-      from: `"Mero Sathi" <${process.env.EMAIL_USER}>`,
+      from: "merosathi.nepal99@gmail.com",
       html: `
       <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
         <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
