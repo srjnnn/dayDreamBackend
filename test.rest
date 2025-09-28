@@ -1,7 +1,9 @@
-POST http://localhost:4000/api/v1/login
+POST http://localhost:4000/api/v1/volunteer/setCategory
 Content-Type: application/json
 
 {
+  "userId":1,
+  "category":"anxiety",
   "email": "mrsrjn224@gmail.com",
   "password": "@newpassword123",
   "newPassword": "@newpassword123",

@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { getUncategorizedUsers, scheduleUser } from "../../../controllers/volunteer/schedule.js";
+import { setCategory } from "../../../controllers/volunteer/setCategory.js";
 
 class volunteerRoute {
     constructor() {
@@ -13,6 +14,9 @@ class volunteerRoute {
 
         // Schedule a user manually
         this.router.post("/scheduleUser", scheduleUser);
+
+        // Set category for a user
+        this.router.post("/setCategory", setCategory);
     }
 }
 
