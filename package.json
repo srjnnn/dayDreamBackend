@@ -1,0 +1,31 @@
+{
+  "name": "saathi_sanga_manko_kura-backend",
+  "version": "1.0.0",
+  "description": "this is the backend for Saathi Sanga Manko Kura",
+  "license": "ISC",
+  "author": "Srijan",
+  "type": "module",
+  "main": "index.js",
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "build": "echo \"No build step required\""
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.55.0",
+    "axios": "^1.11.0",
+    "body-parser": "^2.2.0",
+    "chalk": "^5.5.0",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "ip": "^2.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^7.0.5",
+    "nodemon": "^3.1.10"
+  },
+  "devDependencies": {}
+}
