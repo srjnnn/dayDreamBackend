@@ -17,7 +17,7 @@ export async function signup(req, res) {
     const { data: authData, error: authError } = await supabase.auth.admin.createUser({
       email,
       password,
-      email_confirm: false, // not confirmed yet
+      email_confirm: true, // not confirmed yet
       age
     });
 
