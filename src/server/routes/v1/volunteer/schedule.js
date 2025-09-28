@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { getUncategorizedUsers, scheduleUser } from "../../../controllers/volunteer/schedule.js";
 import { setCategory } from "../../../controllers/volunteer/setCategory.js";
+import { getScheduledUsers } from "../../../controllers/volunteer/getSchedule.js";
 
 class volunteerRoute {
     constructor() {
@@ -17,6 +18,9 @@ class volunteerRoute {
 
         // Set category for a user
         this.router.post("/setCategory", setCategory);
+
+        // get scheduled users
+        this.router.get("/scheduledUsers", getScheduledUsers);       
     }
 }
 

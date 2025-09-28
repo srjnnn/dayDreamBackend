@@ -1,9 +1,11 @@
-POST http://localhost:4000/api/v1/volunteer/setCategory
+GET http://localhost:4000/api/v1/volunteer/scheduledUsers
 Content-Type: application/json
 
 {
   "userId":1,
   "category":"anxiety",
+  "date":"2024-06-20",
+  "time":"10:00 AM",
   "email": "mrsrjn224@gmail.com",
   "password": "@newpassword123",
   "newPassword": "@newpassword123",

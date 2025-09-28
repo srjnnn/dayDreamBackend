@@ -1,5 +1,6 @@
 import supabase from "../../../supabase/index.js";
 import { sendMail } from "../../../utils/mailer.js";
+import { generateRandomUrl } from "../../../utils/randomURL.js";
 
 /**
  * Fetch users whose category is NULL (uncategorized clients)
@@ -30,7 +31,8 @@ export async function getUncategorizedUsers(req, res) {
  * Expects { userId, category, date, time, link } in the request body
  */
 export async function scheduleUser(req, res) {
-  const { userId, date, time, link } = req.body;
+  const { userId, date, time } = req.body;
+  const link ="https://meet.jit.si/"+ generateRandomUrl();
 
   if (!userId || !date || !time || !link) {
     return res.status(400).json({ error: "All fields are required" });
