@@ -70,7 +70,6 @@ export async function requestPasswordReset(req, res) {
 
     return res.status(200).json({
       message: "Password reset code sent to your email",
-      user: updatedUser
     });
 
   } catch (error) {
