@@ -1,4 +1,4 @@
-POST http://localhost:4000/api/signup
+POST http://localhost:4000/api/v1/signup
 Content-Type: application/json
 
 {
@@ -6,6 +6,5 @@ Content-Type: application/json
   "password": "@newpassword123",
   "newPassword": "@newpassword123",
   "name": "Srijan",
-  "number": "9800000000",
   "code":412296
 }

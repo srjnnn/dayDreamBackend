@@ -5,7 +5,7 @@ import { generateSixDigitCode } from "../../../utils/randomNumber.js";
 export async function signup(req, res) {
   const { email, password, name, number } = req.body;
 
-  if (!email || !password || !name || !number) {
+  if (!email || !password || !name ) {
     return res.status(400).json({ error: "All fields are required" });
   }
 
@@ -31,7 +31,6 @@ export async function signup(req, res) {
         {
           name,
           email,
-          number,
           otp: code,
           isverified: false,
           uid: authData.user.id,
