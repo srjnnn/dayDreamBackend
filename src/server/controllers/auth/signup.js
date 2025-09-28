@@ -3,8 +3,8 @@ import { sendMail } from "../../../utils/mailer.js";
 import { generateSixDigitCode } from "../../../utils/randomNumber.js";
 
 export async function signup(req, res) {
-  const { email, password, name, number,age } = req.body;
-
+  const { email, password, name,age } = req.body;
+    console.log("got body ",req.body);
   if (!email || !password || !name || !age ) {
     return res.status(400).json({ error: "All fields are required" });
   }
@@ -18,7 +18,6 @@ export async function signup(req, res) {
       email,
       password,
       email_confirm: true, // not confirmed yet
-      age
     });
 
     if (authError) {
@@ -35,6 +34,8 @@ export async function signup(req, res) {
           otp: code,
           isverified: false,
           uid: authData.user.id,
+          age
+
         }
       ])
       .select();
