@@ -1,4 +1,4 @@
-POST http://localhost:4000/api/v1/events
+GET http://localhost:4000/api/v1/stories
 Content-Type: application/json
 
 {

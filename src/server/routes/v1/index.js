@@ -4,6 +4,7 @@ import loginRoute from './auth/login.js';
 import resetRoute from './auth/reset.js'
 import volunteerRoute from './volunteer/schedule.js';
 import fetchEventsRoute from './operation/fetchEvents.js';
+import fetchStoriesRoute from './operation/fetchStories.js';
 
 export default class V1Route {
     constructor() {
@@ -13,6 +14,7 @@ export default class V1Route {
         this.resetRoute = new resetRoute();
         this.volunteerRoute = new volunteerRoute();
         this.fetchEventsRoute = new fetchEventsRoute();
+        this.fetchStoriesRoute = new fetchStoriesRoute();
         
         this.setupRoutes();
     }
@@ -23,6 +25,7 @@ export default class V1Route {
         this.router.use('/reset', this.resetRoute.router);
         this.router.use('/volunteer', this.volunteerRoute.router);
         this.router.use('/events', this.fetchEventsRoute.router);
+        this.router.use('/stories', this.fetchStoriesRoute.router);
         
     }
 }
