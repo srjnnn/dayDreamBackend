@@ -1,4 +1,4 @@
-GET http://localhost:4000/api/v1/volunteer/scheduledUsers
+POST http://localhost:4000/api/v1/events
 Content-Type: application/json
 
 {
