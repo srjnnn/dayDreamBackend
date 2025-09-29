@@ -1,8 +1,8 @@
-POST http://localhost:4000/api/v1/volunteer/scheduleUser
+POST http://localhost:4000/api/v1/volunteer/setCategory
 Content-Type: application/json
 
 {
-  "userId":9,
+  "userId":26,
   "category":"anxiety",
   "date":"2024-06-20",
   "time":"10:00 AM",
